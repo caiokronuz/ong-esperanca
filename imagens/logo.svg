@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Projetos - ONG Esperança</title>
+  <desc id="desc">Logo com coração verde, pessoas e uma mão azul, acompanhada do texto Projetos ONG Esperança.</desc>
+
+  <!-- Símbolo -->
+  <g transform="translate(35,35)">
+    <!-- Coração -->
+    <path d="M145 72
+             C95 10, 5 38, 5 105
+             C5 175, 72 215, 145 275
+             C218 215, 285 175, 285 105
+             C285 38, 195 10, 145 72 Z"
+          fill="none" stroke="#55B436" stroke-width="22"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Pessoas -->
+    <circle cx="145" cy="108" r="23" fill="#145A86"/>
+    <path d="M103 177 C103 143, 119 128, 145 128 C171 128, 187 143, 187 177 Z"
+          fill="#145A86"/>
+
+    <circle cx="70" cy="126" r="18" fill="#1597A8"/>
+    <path d="M38 180 C38 153, 50 141, 70 141 C90 141, 102 153, 102 180 Z"
+          fill="#1597A8"/>
+
+    <circle cx="220" cy="126" r="18" fill="#55B436"/>
+    <path d="M188 180 C188 153, 200 141, 220 141 C240 141, 252 153, 252 180 Z"
+          fill="#55B436"/>
+
+    <!-- Mão -->
+    <path d="M8 188
+             C48 223, 89 241, 130 238
+             C165 235, 196 218, 220 193
+             L247 164
+             C258 152, 277 158, 281 172
+             C283 179, 281 186, 276 192
+             C251 222, 216 253, 175 272
+             C135 290, 91 288, 54 267
+             C31 254, 15 235, 8 215
+             C4 204, 4 195, 8 188 Z"
+          fill="#145A86"/>
+  </g>
+
+  <!-- Texto -->
+  <g font-family="Arial, Helvetica, sans-serif" fill="#145A86">
+    <text x="350" y="145" font-size="72" font-weight="400">Projetos</text>
+    <text x="350" y="225" font-size="82" font-weight="700">ONG Esperança</text>
+  </g>
+</svg>

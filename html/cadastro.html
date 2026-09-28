@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - ONG Esperança</title>
+    <link rel="stylesheet" href="styles/cadastro.css">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <h1>ONG Esperança</h1>
+
+        <nav id="menu-navegacao">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+
+        <section id="cadastro">
+            <h2>Cadastre-se</h2>
+
+            <p>
+                Preencha o formulário abaixo para se cadastrar como
+                colaborador e participar das iniciativas da ONG.
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset id="dados-pessoais">
+                    <legend>Dados pessoais</legend>
+
+                    <label for="nome">Nome completo:</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        minlength="3"
+                        required
+                    >
+
+                    <br><br>
+
+                    <label for="cpf">CPF:</label>
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                        pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                        maxlength="14"
+                        required
+                    >
+
+                    <br><br>
+
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+
+                </fieldset>
+
+                <br>
+
+                <fieldset id="dados-contato">
+                    <legend>Dados de contato</legend>
+
+                    <label for="email">E-mail:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@email.com"
+                        required
+                    >
+
+                    <br><br>
+
+                    <label for="telefone">Telefone:</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(88) 99999-9999"
+                        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                        maxlength="15"
+                        required
+                    >
+
+                </fieldset>
+
+                <br>
+
+                <fieldset id="endereco">
+                    <legend>Endereço</legend>
+
+                    <label for="cep">CEP:</label>
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        placeholder="00000-000"
+                        pattern="[0-9]{5}-[0-9]{3}"
+                        maxlength="9"
+                        required
+                    >
+
+                    <br><br>
+
+                    <label for="logradouro">Endereço:</label>
+                    <input
+                        type="text"
+                        id="logradouro"
+                        name="logradouro"
+                        required
+                    >
+
+                    <br><br>
+
+                    <label for="numero">Número:</label>
+                    <input
+                        type="number"
+                        id="numero"
+                        name="numero"
+                        min="1"
+                        required
+                    >
+
+                    <br><br>
+
+                    <label for="cidade">Cidade:</label>
+                    <input
+                        type="text"
+                        id="cidade"
+                        name="cidade"
+                        required
+                    >
+
+                    <br><br>
+
+                    <label for="estado">Estado:</label>
+                    <select
+                        id="estado"
+                        name="estado"
+                        required
+                    >
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset id="voluntariado">
+                    <legend>Interesse em voluntariado</legend>
+
+                    <p>
+                        Em qual área você gostaria de colaborar?
+                    </p>
+
+                    <input
+                        type="radio"
+                        id="eventos"
+                        name="area"
+                        value="eventos"
+                        required
+                    >
+                    <label for="eventos">Eventos e ações sociais</label>
+
+                    <br>
+
+                    <input
+                        type="radio"
+                        id="doacoes"
+                        name="area"
+                        value="doacoes"
+                    >
+                    <label for="doacoes">Campanhas de doação</label>
+
+                    <br>
+
+                    <input
+                        type="radio"
+                        id="comunicacao"
+                        name="area"
+                        value="comunicacao"
+                    >
+                    <label for="comunicacao">Comunicação e divulgação</label>
+
+                    <br>
+
+                    <input
+                        type="radio"
+                        id="outros"
+                        name="area"
+                        value="outros"
+                    >
+                    <label for="outros">Outras atividades</label>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset id="confirmacao">
+                    <legend>Confirmação</legend>
+
+                    <input
+                        type="checkbox"
+                        id="termos"
+                        name="termos"
+                        required
+                    >
+
+                    <label for="termos">
+                        Declaro que as informações fornecidas são verdadeiras
+                        e concordo em participar das iniciativas da ONG.
+                    </label>
+
+                    <br><br>
+
+                    <button type="submit">
+                        Enviar cadastro
+                    </button>
+
+                    <button type="reset">
+                        Limpar formulário
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer id="rodape">
+        <p>
+            &copy; 2026 ONG Esperança. Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - ONG Esperança</title>
+    <link rel="stylesheet" href="styles/projetos.css">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <h1>ONG Esperança</h1>
+
+        <nav id="menu-navegacao">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+
+        <section id="feedback">
+            <h2>Informações</h2>
+
+            <div class="alerta">
+                <strong>Atenção:</strong>
+                As doações e o trabalho voluntário são fundamentais para manter nossas ações sociais.
+            </div>
+
+            <div class="toast" id="toast">
+                Informação consultada com sucesso!
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Nossos Projetos</h2>
+
+            <p>
+                Conheça as principais iniciativas da ONG Esperança
+                e descubra como você pode contribuir para nossas ações.
+            </p>
+
+            <article id="acao-social">
+                <span class="badge">Ação social</span>
+                <h3>Ações Sociais</h3>
+                <p>Realizamos ações sociais para auxiliar pessoas em situação de vulnerabilidade, promovendo
+                    distribuição de alimentos, roupas e outros itens essenciais.</p>
+
+                <button class="botao-modal" type="button">
+                    Saiba mais
+                </button>
+            </article>
+        </section>
+
+        <section id="voluntariado">
+            <h2>Voluntariado</h2>
+
+            <p>
+                O trabalho voluntário é fundamental para a realização
+                dos nossos projetos. Você pode contribuir com seu
+                tempo, conhecimento e habilidades.
+            </p>
+
+            <article id="como-participar">
+                <span class="badge">Voluntariado</span>
+                <h3>Como participar</h3>
+
+                <ul>
+                    <li>Participar das ações sociais;</li>
+                    <li>Auxiliar na organização dos eventos;</li>
+                    <li>Contribuir com suas habilidades profissionais;</li>
+                    <li>Apoiar campanhas e atividades da ONG.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="doacoes">
+            <h2>Campanhas de Doação</h2>
+
+            <p>
+                As doações ajudam a manter nossos projetos e permitem
+                que possamos ampliar o atendimento às comunidades.
+            </p>
+
+            <article id="como-doar">
+                <span class="badge">Doação</span>
+                <h3>Como contribuir</h3>
+
+                <p>Você pode contribuir financeiramente para apoiar nossas campanhas e ajudar na aquisição de alimentos,
+                    roupas e materiais necessários para as ações.</p>
+
+                <ul>
+                    <li>Doação de alimentos;</li>
+                    <li>Doação de roupas e materiais;</li>
+                    <li>Contribuição financeira;</li>
+                    <li>Divulgação das campanhas.</li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+
+    <footer id="rodape">
+        <p>
+            &copy; 2026 ONG Esperança. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <button id="fechar-modal" class="fechar-modal" type="button">
+                &times;
+            </button>
+
+            <h2>Sobre as Ações Sociais</h2>
+
+            <p>
+                As ações sociais da ONG Esperança buscam atender pessoas
+                em situação de vulnerabilidade por meio da distribuição
+                de alimentos, roupas e outros itens essenciais.
+            </p>
+
+            <button id="confirmar-modal" class="botao-modal" type="button">
+                Entendi
+            </button>
+        </div>
+    </div>
+
+    <script src="script/projetos.js"></script>
+
+</body>
+
+</html>
