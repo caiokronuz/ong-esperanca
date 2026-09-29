@@ -222,16 +222,20 @@ export function templateCadastro() {
                         id="nome"
                         name="nome"
                         minlength="3"
+                        autocomplete="name"
                         required
                     >
 
                     <label for="cpf">CPF</label>
+                    <p id="ajuda-cpf">Formato: 000.000.000-00</p>
                     <input
                         type="text"
                         id="cpf"
                         name="cpf"
                         pattern="[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}-[0-9]{2}"
                         maxlength="14"
+                        inputmode="numeric"
+                        autocomplete="off"
                         required
                     >
 
@@ -252,16 +256,20 @@ export function templateCadastro() {
                         type="email"
                         id="email"
                         name="email"
+                        autocomplete="email"
                         required
                     >
 
                     <label for="telefone">Telefone</label>
+                    <p id="ajuda-telefone">Formato: (00) 00000-0000</p>
                     <input
                         type="tel"
                         id="telefone"
                         name="telefone"
                         pattern="\\([0-9]{2}\\) [0-9]{5}-[0-9]{4}"
                         maxlength="15"
+                        autocomplete="tel"
+                        inputmode="tel"
                         required
                     >
                 </fieldset>
@@ -270,12 +278,15 @@ export function templateCadastro() {
                     <legend>Endereço</legend>
 
                     <label for="cep">CEP</label>
+                    <p id="ajuda-cep">Formato: 00000-000</p>
                     <input
                         type="text"
                         id="cep"
                         name="cep"
                         pattern="[0-9]{5}-[0-9]{3}"
                         maxlength="9"
+                        autocomplete="postal-code"
+                        inputmode="numeric"
                         required
                     >
 
