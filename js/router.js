@@ -32,20 +32,42 @@ function obterRota() {
     return parametros.get("pagina") || "inicio";
 }
 
+function atualizarNavegacao(rotaAtual) {
+    const links = document.querySelectorAll("[data-rota]");
 
-export function renderizarRota(rota) {
-    const template = rotas[rota] || templateInicio;
+    links.forEach((link) => {
+        if (link.dataset.rota === rotaAtual) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
+export function renderizarRota(rota, moverFoco = false) {
+    const rotaAtual = rotas[rota] ? rota : "inicio";
+    const template = rotas[rotaAtual];
 
     conteudoPrincipal.innerHTML = template();
 
-    if (rota === "projetos") {
+    atualizarNavegacao(rotaAtual);
+
+    if (rotaAtual === "projetos") {
         configurarEventosProjetos();
     }
 
-    if (rota === "cadastro"){
+    if (rotaAtual === "cadastro") {
         configurarValidacaoCadastro();
     }
 
+    if (moverFoco) {
+        const tituloPagina = conteudoPrincipal.querySelector("h2");
+
+        if (tituloPagina) {
+            tituloPagina.setAttribute("tabindex", "-1");
+            tituloPagina.focus();
+        }
+    }
 }
 
 
@@ -66,7 +88,7 @@ function navegar(event) {
 
     history.pushState({}, "", url);
 
-    renderizarRota(rota);
+    renderizarRota(rota, true);
 }
 
 
@@ -74,7 +96,7 @@ export function iniciarRouter() {
     document.addEventListener("click", navegar);
 
     window.addEventListener("popstate", () => {
-        renderizarRota(obterRota());
+        renderizarRota(obterRota(), true);
     });
 
     renderizarRota(obterRota());

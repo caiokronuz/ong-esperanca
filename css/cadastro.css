@@ -81,6 +81,11 @@ body {
     color: var(--cor-secundaria);
 }
 
+#menu-navegacao a[aria-current="page"] {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
 #menu-navegacao a:focus-visible {
     outline: 3px solid var(--cor-secundaria);
     outline-offset: 4px;
@@ -153,11 +158,11 @@ body {
 }
 
 /* Campo em foco */
-#cadastro input:focus,
-#cadastro select:focus {
-    outline: none;
-    border-color: var(--cor-acento);
-    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+#cadastro input:focus-visible,
+#cadastro select:focus-visible {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 2px;
+    border-color: var(--cor-primaria);
 }
 
 /* Campo preenchido corretamente */

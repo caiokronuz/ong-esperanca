@@ -35,7 +35,6 @@ export function configurarValidacaoCadastro() {
     renderizarCadastros();
 }
 
-
 function mostrarMensagem(formulario, mensagem) {
     let feedback = document.getElementById(
         "feedback-cadastro"
@@ -44,6 +43,8 @@ function mostrarMensagem(formulario, mensagem) {
     if (!feedback) {
         feedback = document.createElement("p");
         feedback.id = "feedback-cadastro";
+        feedback.setAttribute("role", "status");
+        feedback.setAttribute("aria-live", "polite");
 
         formulario.prepend(feedback);
     }

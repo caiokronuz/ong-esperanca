@@ -87,6 +87,11 @@ body {
     color: var(--cor-texto);
 }
 
+#menu-navegacao a[aria-current="page"] {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
 #menu-navegacao a:focus-visible {
     outline: 3px solid var(--cor-secundaria);
     outline-offset: 3px;
