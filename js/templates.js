@@ -4,7 +4,7 @@ export function templateInicio() {
             <h2>Sobre a ONG</h2>
 
             <img
-                src="./imagens/logo.svg"
+                src="imagens/logo.svg"
                 alt="Logo da ONG Esperança"
                 width="240"
             >
