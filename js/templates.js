@@ -67,7 +67,12 @@ export function templateProjetos() {
                 para manter nossas ações sociais.
             </div>
 
-            <div class="toast" id="toast">
+            <div
+                class="toast"
+                id="toast"
+                role="status"
+                aria-live="polite"
+            >
                 Informação consultada com sucesso!
             </div>
         </section>
@@ -153,18 +158,26 @@ export function templateProjetos() {
             </article>
         </section>
 
-        <div id="modal" class="modal">
+        <div 
+            id="modal" 
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-modal"
+            aria-hidden="true"
+        >
             <div class="modal-conteudo">
 
                 <button
                     id="fechar-modal"
                     class="fechar-modal"
                     type="button"
+                    aria-label="Fechar janela"
                 >
                     &times;
                 </button>
 
-                <h2>Sobre as Ações Sociais</h2>
+                <h2 id="titulo-modal">Sobre as Ações Sociais</h2>
 
                 <p>
                     As ações sociais da ONG Esperança buscam atender
