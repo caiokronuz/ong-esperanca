@@ -184,6 +184,23 @@
     font-weight: bold;
 }
 
+.mensagem-erro {
+    margin: 0;
+    color: var(--cor-erro);
+    font-size: var(--tamanho-pequeno);
+    font-weight: bold;
+}
+
+#cadastro input[aria-invalid="true"],
+#cadastro select[aria-invalid="true"] {
+    border-color: var(--cor-erro);
+}
+
+#cadastro input[aria-invalid="false"],
+#cadastro select[aria-invalid="false"] {
+    border-color: var(--cor-sucesso);
+}
+
 /* =========================
    768px - TABLET
    ========================= */
