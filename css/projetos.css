@@ -73,7 +73,7 @@
     padding: var(--espaco-3) var(--espaco-4);
     border-left: 5px solid var(--cor-alerta);
     border-radius: var(--raio);
-    background: #FFF8E1;
+     background: var(--cor-fundo-alerta);
     color: var(--cor-texto);
     box-shadow: var(--sombra);
 }
