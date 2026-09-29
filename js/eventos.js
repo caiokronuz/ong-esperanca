@@ -5,7 +5,13 @@ export function configurarEventosProjetos() {
     const confirmarModal = document.getElementById("confirmar-modal");
     const toast = document.getElementById("toast");
 
-    if (!modal) {
+    if (
+        !modal ||
+        !abrirModal ||
+        !fecharModal ||
+        !confirmarModal ||
+        !toast
+    ) {
         return;
     }
 
@@ -51,7 +57,7 @@ export function configurarEventosProjetos() {
         }
     });
 
-    document.addEventListener("keydown", (event) => {
+    modal.addEventListener("keydown", (event) => {
         if (!modal.classList.contains("ativo")) {
             return;
         }
@@ -67,9 +73,13 @@ export function configurarEventosProjetos() {
             );
 
             const primeiroElemento = elementosFocaveis[0];
-            const ultimoElemento = elementosFocaveis[elementosFocaveis.length - 1];
+            const ultimoElemento =
+                elementosFocaveis[elementosFocaveis.length - 1];
 
-            if (event.shiftKey && document.activeElement === primeiroElemento) {
+            if (
+                event.shiftKey &&
+                document.activeElement === primeiroElemento
+            ) {
                 event.preventDefault();
                 ultimoElemento.focus();
             } else if (
