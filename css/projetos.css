@@ -1,104 +1,6 @@
-:root {
-    --cor-primaria: #0B6E4F;
-    --cor-primaria-escura: #064A35;
-    --cor-secundaria: #F2C14E;
-    --cor-acento: #2A9D8F;
-    --cor-fundo: #F8F9FA;
-    --cor-superficie: #FFFFFF;
-    --cor-texto: #212529;
-    --cor-texto-secundario: #6C757D;
-    --cor-borda: #DEE2E6;
-    --cor-sucesso: #198754;
-    --cor-erro: #DC3545;
-    --cor-alerta: #F2C14E;
-
-    --tamanho-pequeno: 0.875rem;
-    --tamanho-base: 1rem;
-    --tamanho-subtitulo: 1.25rem;
-    --tamanho-titulo: 2rem;
-    --tamanho-titulo-principal: 2.5rem;
-
-    --espaco-1: 0.25rem;
-    --espaco-2: 0.5rem;
-    --espaco-3: 1rem;
-    --espaco-4: 1.5rem;
-    --espaco-5: 2rem;
-    --espaco-6: 3rem;
-
-    --raio: 8px;
-    --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --largura-maxima: 1200px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
-}
-
-body {
-    margin: 0;
-    background: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: Arial, sans-serif;
-    font-size: var(--tamanho-base);
-    line-height: 1.6;
-}
-
-#cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: var(--espaco-3);
-    padding: var(--espaco-4) 5%;
-    background: var(--cor-primaria);
-    color: var(--cor-superficie);
-}
-
-#cabecalho h1 {
-    margin: 0;
-    font-size: var(--tamanho-titulo-principal);
-}
-
-#menu-navegacao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--espaco-4);
-    flex-wrap: wrap;
-}
-
-#menu-navegacao a {
-    color: var(--cor-superficie);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease, opacity 0.2s ease;
-}
-
-#menu-navegacao a:hover {
-    color: var(--cor-secundaria);
-}
-
-#menu-navegacao a[aria-current="page"] {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-}
-
-#menu-navegacao a:focus-visible {
-    outline: 3px solid var(--cor-secundaria);
-    outline-offset: 4px;
-}
-
-#conteudo-principal {
-    width: min(90%, var(--largura-maxima));
-    margin: var(--espaco-6) auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--espaco-5);
-}
+/* =========================
+   PÁGINA DE PROJETOS
+   ========================= */
 
 #projetos {
     grid-column: span 12;
@@ -112,15 +14,14 @@ body {
     grid-column: span 6;
 }
 
-#conteudo-principal h2 {
-    color: var(--cor-primaria);
-    font-size: var(--tamanho-titulo);
-}
-
 #conteudo-principal h3 {
     color: var(--cor-primaria-escura);
     font-size: var(--tamanho-subtitulo);
 }
+
+/* =========================
+   CARDS
+   ========================= */
 
 #acao-social,
 #como-participar,
@@ -192,10 +93,13 @@ body {
     font-weight: bold;
 }
 
-/* Botão do modal */
+/* =========================
+   BOTÃO DO MODAL
+   ========================= */
 
 .botao-modal {
     width: fit-content;
+    min-height: 44px;
     padding: var(--espaco-2) var(--espaco-4);
     border: none;
     border-radius: var(--raio);
@@ -204,7 +108,8 @@ body {
     font: inherit;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s ease,
+    transition:
+        background-color 0.2s ease,
         box-shadow 0.2s ease,
         transform 0.2s ease;
 }
@@ -223,7 +128,9 @@ body {
     transform: translateY(1px);
 }
 
-/* Toast */
+/* =========================
+   TOAST
+   ========================= */
 
 .toast {
     position: fixed;
@@ -239,7 +146,8 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: opacity 0.3s ease,
+    transition:
+        opacity 0.3s ease,
         visibility 0.3s ease,
         transform 0.3s ease;
 }
@@ -250,7 +158,9 @@ body {
     transform: translateY(0);
 }
 
-/* Modal */
+/* =========================
+   MODAL
+   ========================= */
 
 .modal {
     position: fixed;
@@ -263,7 +173,8 @@ body {
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease,
+    transition:
+        opacity 0.3s ease,
         visibility 0.3s ease;
 }
 
@@ -296,6 +207,8 @@ body {
     position: absolute;
     top: var(--espaco-2);
     right: var(--espaco-3);
+    min-width: 44px;
+    min-height: 44px;
     border: none;
     background: transparent;
     color: var(--cor-texto-secundario);
@@ -312,28 +225,9 @@ body {
     outline-offset: 3px;
 }
 
-/* Rodapé */
-
-#rodape {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 80px;
-    padding: var(--espaco-4);
-    background: var(--cor-primaria-escura);
-    color: var(--cor-superficie);
-    text-align: center;
-}
-
-/* 1200px */
-
-@media (max-width: 1200px) {
-    #conteudo-principal {
-        width: 92%;
-    }
-}
-
-/* 1024px */
+/* =========================
+   1024px - TABLET GRANDE
+   ========================= */
 
 @media (max-width: 1024px) {
 
@@ -343,53 +237,31 @@ body {
     }
 }
 
-/* 768px */
+/* =========================
+   768px - TABLET
+   ========================= */
 
 @media (max-width: 768px) {
-    #conteudo-principal {
-        grid-template-columns: repeat(6, 1fr);
-        gap: var(--espaco-4);
-    }
 
     #projetos,
-    #feedback {
-        grid-column: span 6;
-    }
-
+    #feedback,
     #voluntariado,
     #doacoes {
         grid-column: span 6;
     }
-
-    #cabecalho {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 }
 
-/* 600px */
+/* =========================
+   600px - CELULAR
+   ========================= */
 
 @media (max-width: 600px) {
-    #conteudo-principal {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     #projetos,
     #voluntariado,
     #doacoes,
     #feedback {
         grid-column: span 2;
-    }
-
-    #menu-navegacao {
-        width: 100%;
-        gap: var(--espaco-3);
-    }
-
-    #menu-navegacao a {
-        flex: 1;
-        text-align: center;
     }
 
     .toast {
@@ -399,12 +271,11 @@ body {
     }
 }
 
-/* 480px */
+/* =========================
+   480px - CELULAR PEQUENO
+   ========================= */
 
 @media (max-width: 480px) {
-    #conteudo-principal {
-        grid-template-columns: 1fr;
-    }
 
     #projetos,
     #voluntariado,
@@ -417,15 +288,6 @@ body {
     #como-participar,
     #como-doar {
         padding: var(--espaco-3);
-    }
-
-    #menu-navegacao {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    #menu-navegacao a {
-        width: 100%;
     }
 
     .modal-conteudo {
