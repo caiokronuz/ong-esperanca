@@ -1,10 +1,12 @@
+const BASE_URL = import.meta.env.BASE_URL;
+
 export function templateInicio() {
     return `
         <section id="sobre-ong">
             <h2>Sobre a ONG</h2>
 
             <img
-                src="imagens/logo.svg"
+                src="${BASE_URL}imagens/logo.svg"
                 alt="Logo da ONG Esperança"
                 width="240"
             >
