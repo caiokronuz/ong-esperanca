@@ -82,6 +82,11 @@ body {
     color: var(--cor-secundaria);
 }
 
+#menu-navegacao a[aria-current="page"] {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
 #menu-navegacao a:focus-visible {
     outline: 3px solid var(--cor-secundaria);
     outline-offset: 4px;
@@ -182,7 +187,7 @@ body {
     padding: var(--espaco-1) var(--espaco-2);
     border-radius: 999px;
     background: var(--cor-acento);
-    color: var(--cor-superficie);
+    color: var(--cor-texto);
     font-size: var(--tamanho-pequeno);
     font-weight: bold;
 }
@@ -200,8 +205,8 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s ease,
-                box-shadow 0.2s ease,
-                transform 0.2s ease;
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
 }
 
 .botao-modal:hover {
@@ -235,8 +240,8 @@ body {
     visibility: hidden;
     transform: translateY(20px);
     transition: opacity 0.3s ease,
-                visibility 0.3s ease,
-                transform 0.3s ease;
+        visibility 0.3s ease,
+        transform 0.3s ease;
 }
 
 .toast.ativo {
@@ -259,7 +264,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease,
-                visibility 0.3s ease;
+        visibility 0.3s ease;
 }
 
 .modal.ativo {
@@ -331,6 +336,7 @@ body {
 /* 1024px */
 
 @media (max-width: 1024px) {
+
     #voluntariado,
     #doacoes {
         grid-column: span 12;

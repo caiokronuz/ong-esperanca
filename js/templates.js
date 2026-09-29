@@ -5,7 +5,7 @@ export function templateInicio() {
 
             <img
                 src="../imagens/logo.svg"
-                alt="Projetos - ONG Esperança"
+                alt="Logo da ONG Esperança"
                 width="240"
             >
 
